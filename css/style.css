@@ -1,0 +1,91 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+     rgba(121, 214, 105, 0.69), 
+     rgba(61, 179, 139, 0.507)),
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; 
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 15px;
+}
+
+
+
+/*
+
+height: 95vh; /ビューポート
+background-image: linear-gradient(to right bottom, #7ed56f, #28b485),url(../img/hero.jpg); /背景画像にグラデーションをつける
+background-position: top; /画像をブラウザの上部に合わせる
+clip-path: polygon(x y, x y, x y); /画像を加工する
+text-transform: uppercase; /テキストサイズを大きくする
+
+
+
+/*
