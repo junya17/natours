@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 COLORS:
 
@@ -6,157 +7,213 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+html {
+  font-size: 10px; }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #777;
-    padding: 30px;
-}
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,
-     rgba(121, 214, 105, 0.69), 
-     rgba(61, 179, 139, 0.507)),
-    url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top; 
-    position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.507)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
 
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
 
-.logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-}
+.header__logo {
+  height: 35px; }
 
-.logo {
-    height: 35px;
-}
-
-.text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%); }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: 6rem; }
 
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
 
-.heading-primary-main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-
-    /* 
+/* 
     animation-delay: 3s;
     animation-iteration-count: 3;
     */
-
-.heading-primary-sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation: moveInRight 1s ease-out;
-    -webkit-animation: moveInRight 1s ease-out;
-}
-
+.heading-primary--sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
+  animation: moveInRight 1s ease-out;
+  -webkit-animation: moveInRight 1s ease-out; }
 
 /* テキストを左から表示させる */
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-        -webkit-transform: translateX(-100px);
-        -moz-transform: translateX(-100px);
-        -ms-transform: translateX(-100px);
-        -o-transform: translateX(-100px);
-    }
-
-    80% {
-        transform: translateX(10px);
-        -webkit-transform: translateX(10px);
-        -moz-transform: translateX(10px);
-        -ms-transform: translateX(10px);
-        -o-transform: translateX(10px);
-}
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-        -webkit-transform: translate(0);
-        -moz-transform: translate(0);
-        -ms-transform: translate(0);
-        -o-transform: translate(0);
-}
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem);
+    -webkit-transform: translateX(1rem);
+    -moz-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    -o-transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0); } }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -ms-transform: translateX(100px);
-        -o-transform: translateX(100px);
-}
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+    -webkit-transform: translateX(10rem);
+    -moz-transform: translateX(10rem);
+    -ms-transform: translateX(10rem);
+    -o-transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem);
+    -webkit-transform: translateX(-1rem);
+    -moz-transform: translateX(-1rem);
+    -ms-transform: translateX(-1rem);
+    -o-transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0); } }
 
-    80% {
-        transform: translateX(-10px);
-        -webkit-transform: translateX(-10px);
-        -moz-transform: translateX(-10px);
-        -ms-transform: translateX(-10px);
-        -o-transform: translateX(-10px);
-}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+    -webkit-transform: translateY(3rem);
+    -moz-transform: translateY(3rem);
+    -ms-transform: translateY(3rem);
+    -o-transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0); } }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-        -webkit-transform: translate(0);
-        -moz-transform: translate(0);
-        -ms-transform: translate(0);
-        -o-transform: translate(0);
-}
-}
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem; }
 
+.btn:hover {
+  transform: translateY(-0.3rem);
+  -webkit-transform: translateY(-0.3rem);
+  -moz-transform: translateY(-0.3rem);
+  -ms-transform: translateY(-0.3rem);
+  -o-transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.btn:active {
+  transform: translateY(-0.1rem);
+  -webkit-transform: translateY(-0.1rem);
+  -moz-transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
+  -o-transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
 
-/*
+.btn--white {
+  background-color: #fff;
+  color: #777; }
 
-height: 95vh; /ビューポート
-background-image: linear-gradient(to right bottom, #7ed56f, #28b485),url(../img/hero.jpg); /背景画像にグラデーションをつける
-background-position: top; /画像をブラウザの上部に合わせる
-clip-path: polygon(x y, x y, x y); /画像を加工する
-text-transform: uppercase; /テキストサイズを大きくする
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s; }
 
+.btn--white::after {
+  background-color: #fff; }
 
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+  -moz-transform: scaleX(1.4) scaleY(1.6);
+  -ms-transform: scaleX(1.4) scaleY(1.6);
+  -o-transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
 
-/*
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  /* 初期値が適用される（0%） */ }
