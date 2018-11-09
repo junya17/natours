@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 *,
 *::after,
 *::before {
@@ -137,8 +129,7 @@ body {
     -ms-transform: translate(0);
     -o-transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -163,6 +154,13 @@ body {
   -ms-transform: translateY(-0.3rem);
   -o-transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+    -moz-transform: scaleX(1.4) scaleY(1.6);
+    -ms-transform: scaleX(1.4) scaleY(1.6);
+    -o-transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
@@ -175,6 +173,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -195,17 +195,6 @@ body {
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-  -moz-transform: scaleX(1.4) scaleY(1.6);
-  -ms-transform: scaleX(1.4) scaleY(1.6);
-  -o-transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
